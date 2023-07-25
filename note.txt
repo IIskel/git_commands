@@ -1,0 +1,117 @@
+Git Show:
+
+Git show is used to show what changes is happened in the specific file 
+1. The red color is use to show the former or previous version and
+2. The green color uis used to show the current change happened in the file.
+
+Example:   >git show HEAD -> to view in the current
+Example 2  >git show HEAD~1  -> To view the previous file:
+
+GIT ANNOTATE:
+	Is used to show who did the commit and which line he has commited 
+
+Example:  >git annotate >file<
+
+
+GIT CHECKOUT:
+
+	Git checkout is used to view or go back and view the previous file.
+
+Example:
+	>git commit <commit ID>
+
+
+Git Pull:
+
+	if there is a change in remote repo(Github) and it is committed over github or by different person we 
+	use "GIT PULL" commands to pull it to local repo
+
+Example: 
+	>git pull
+
+
+GIT RM <FILE>:
+	Is used to remove/delete file.
+
+GIT BRANCH:
+
+	Is used to check how many branch do we have in the current repository.
+
+GIT BRANCH:
+	Is also used to create branch 
+
+Example: 
+	to create a branch called test
+	>git branch test 
+
+GIT SWITCH: 
+
+Example:
+	>git switch - it means that go back to the previous one
+	
+	Is used to swithch back to Master/HEAD
+
+GIT MERGE:
+	Is used to pull the change in the branch
+	-whenever you want to pull the change you need to be in the destination branch to pull the change to it
+
+Full Example: 
+	
+	 We are in the master depo and open git bash here
+	 1. here we create test branch
+	 	>git branch test
+	   1.1 Then check if the branch created
+	   	>git branch
+			::Master
+			::test
+	  Now we have test branch:
+
+	  2. Now go to test branch from master using git checkout 
+	  	>git checkout test 
+	  3. Now we are test branch and we can work our test code here and if we believe that our code works we can merge it to the master branch 
+	  	example : 
+			create a file here using vi or vim 
+				>vi file*
+	4. Lets say we have also created a new file in master branch 
+		so we need 
+		 >git add .
+		 >git commit - "say something"
+		in both branch (I.e test and Master)
+	5. Now we need to push both:
+		>git push origin master 
+		>git push origin test
+	6. if we want to merge the change in test we need to be in master branch
+		>git merge test
+	7. again if we are in the local repo we need to push this commit to the origin.
+		>git push origin master
+
+Git tags:
+	
+	Tags are ref's that point to a specific commit in Git history.
+	-Tagging is generally used to capture a point in history that is used for a marked version release(i.e v1.0.1).
+	-A tag is like a branch that doesn't change.
+
+Git restore:
+	
+	Git restore is used to restore or help us to go back to the previous version of our file 
+ 
+ Example:
+
+ Reverts from working directory(before it is staged(i.e >git add .))
+
+       >git restore <filename>   or 
+       >git checkout --<filename>
+
+
+Revert changes from Staging Area:
+
+	>git restore --stage <file_name> #To revert changes from staging area to working directory 
+	>git restore <file_name>  #To revert changes from working directory 
+
+Revert changes from Local Repository 
+
+	>git reset HEAD~  #To revert changes from local repo to working directory
+	>git restore <file_name>  #To revert changes from working directory
+
+
+

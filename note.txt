@@ -131,4 +131,15 @@ Revert changes from Local Repository
 	>git restore <file_name>  #To revert changes from working directory
 
 
+Git Ignore:
+	.Gitignore is used to exclude the file we dont want in the current repo to be updated or uploaded to the remote repo
 
+Example:
+	For instance we have so many file in our local repo file1.txt, file2.txt, mail.txt and etc and we want to ignore them not to be uploaded to the remote repo
+	so we ignore them as follows:
+	1. open .gitignore file using text editor like
+		>vi .gitignore
+	2. Add the file you want to be ignored:
+		I want all file with *.txt extension to be ignored, so I write it .ignorefile like:
+		*.txt   and save it. 
+	3. git add then git commit then git push to origin

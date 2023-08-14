@@ -143,3 +143,15 @@ Example:
 		I want all file with *.txt extension to be ignored, so I write it .ignorefile like:
 		*.txt   and save it. 
 	3. git add then git commit then git push to origin
+
+Git Rebase:
+	
+	Usually, we use whenever we want to squeeze multiple commits into one commit. 
+	for example if we have commited five commit one one file and we want to push only one log into remote repo we use git rebase.
+	
+	Example:
+		>git rebase -i HEAD~4   Because we have done 5 git commit HEAD-1, HEAD -2, HEAD-3, HEAD-4
+
+		then >pick only one commit and 
+		     >squash another commit into it. then save file 
+		 then -->comment out unneccesary commiit comment for the file that is squashed
